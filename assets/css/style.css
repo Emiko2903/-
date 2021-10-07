@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -36,6 +37,12 @@
   font-size: 20px;
 }
 
+.container .header .row .navbar .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .container .header .row .navbar .socials .nav__socials {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -56,7 +63,9 @@
       -ms-flex-direction: column;
           flex-direction: column;
   margin-left: 20px;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .container .header .row .navbar .burger__menu .burger__line {
@@ -65,19 +74,42 @@
   background-color: #7a7a7a;
   width: 50px;
   height: 7px;
+  display: none;
+}
+
+.container .main .flex__rev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+}
+
+.container .main .flex__rev .main__foto .img {
+  width: 507px;
 }
 
 @media (max-width: 992px) {
   .nav {
     display: none;
+    /*Почему бургер не реагирует на медиазапросы*/
   }
-}
-
-@media (max-width: 991px) {
-  .burger__menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .socials {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .img {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
